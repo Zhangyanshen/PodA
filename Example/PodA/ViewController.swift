@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import PodA
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var imgView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        YSTool.test()
+        let path = Bundle.main.path(forResource: "PodA", ofType: "bundle")
+        let bundle = Bundle(path: path ?? "")
+        let imgName = "group4@\(Int(UIScreen.main.scale))x.png"
+        imgView.image = UIImage.init(named: imgName, in: bundle, compatibleWith: nil)
     }
 
     override func didReceiveMemoryWarning() {

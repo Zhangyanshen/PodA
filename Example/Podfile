@@ -1,13 +1,13 @@
-use_frameworks!
+source 'https://cdn.cocoapods.org/'
+#use_frameworks!
+
+plugin 'cocoapods-imy-bin'
+use_binaries!
+set_use_source_pods ['PodA']
 
 platform :ios, '9.0'
 
 target 'PodA_Example' do
-  pod 'PodA', :path => '../'
-
-  target 'PodA_Tests' do
-    inherit! :search_paths
-
-    pod 'FBSnapshotTestCase' , '~> 2.1.4'
-  end
+#  pod 'PodA', :path => '../'
+  pod 'PodA'
 end

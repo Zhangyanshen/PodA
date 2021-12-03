@@ -1,0 +1,35 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - PodA (0.1.1):
+    - AFNetworking
+
+DEPENDENCIES:
+  - PodA
+
+SPEC REPOS:
+  "git@github.com:Zhangyanshen/example-private-spec-bin.git":
+    - PodA
+  trunk:
+    - AFNetworking
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  PodA: 8b3b110507f751fe1bfa5a463bbfef75686b18a4
+
+PODFILE CHECKSUM: cadcb0bfe23d4577e76b2a33b0d313f01628acf0
+
+COCOAPODS: 1.11.2
