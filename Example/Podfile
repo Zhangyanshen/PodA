@@ -1,7 +1,8 @@
 source 'https://cdn.cocoapods.org/'
 #use_frameworks!
+#use_modular_headers!
 
-plugin 'cocoapods-imy-bin'
+plugin 'cocoapods-mtxx-bin'
 use_binaries!
 set_use_source_pods ['PodA']
 

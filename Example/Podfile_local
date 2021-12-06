@@ -1,0 +1,5 @@
+
+#plugin 'cocoapods-mtxx-bin'
+#use_binaries!
+#set_use_source_pods ['PodA']
+

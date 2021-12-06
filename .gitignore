@@ -35,6 +35,6 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 Pods/
-cocoapods-imy-bin/
+cocoapods-mtxx-bin/
 Example-build-temp/
 .idea/

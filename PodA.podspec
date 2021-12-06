@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PodA'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of PodA.'
 
 # This description is used to generate tags and improve search results.
@@ -38,6 +38,6 @@ TODO: Add long description of the pod here.
 
 #   s.public_header_files = 'PodA/Classes/**/*.{h,swift}'
   # s.frameworks = 'UIKit', 'MapKit'
-   s.dependency 'AFNetworking'
+   s.dependency 'AFNetworking', '4.0.0'
    s.static_framework = true
 end
