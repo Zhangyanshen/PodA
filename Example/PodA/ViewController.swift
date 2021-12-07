@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        YSTool.test()
+//        YSTool.test()
         CoreFile.coreFunc()
         MapKitFile.mapkitFunc()
         let path = Bundle.main.path(forResource: "PodA", ofType: "bundle")
