@@ -14,21 +14,24 @@ PODS:
   - AFNetworking/Serialization (4.0.0)
   - AFNetworking/UIKit (4.0.0):
     - AFNetworking/NSURLSession
-  - PodA (0.1.2):
-    - AFNetworking (= 4.0.0)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - PodA
+  - PodA/MapKit (from `../`)
 
 SPEC REPOS:
   "git@github.com:Zhangyanshen/example-private-spec-bin.git":
     - AFNetworking
-    - PodA
+    - YYModel
+
+EXTERNAL SOURCES:
+  PodA:
+    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: 9a48719229e7ccbb6f3aed2699beb26eb196c38c
-  PodA: a38999a596aedddf631db28c1d2192cfcab1d220
+  YYModel: 23eee8c4eb3f0046f4e67f42d60576c510dc932a
 
-PODFILE CHECKSUM: 6a3b4bc2c31704fd398196466fa247eb0553b597
+PODFILE CHECKSUM: 621d759dc605f354986c45e014a57c1e785c146c
 
 COCOAPODS: 1.11.2

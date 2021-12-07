@@ -9,6 +9,6 @@ set_use_source_pods ['PodA']
 platform :ios, '9.0'
 
 target 'PodA_Example' do
-#  pod 'PodA', :path => '../'
-  pod 'PodA'
+  pod 'PodA/MapKit', :path => '../'
+#  pod 'PodA'
 end

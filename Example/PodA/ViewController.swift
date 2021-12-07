@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         YSTool.test()
+        CoreFile.coreFunc()
+        MapKitFile.mapkitFunc()
         let path = Bundle.main.path(forResource: "PodA", ofType: "bundle")
         let bundle = Bundle(path: path ?? "")
         let imgName = "group4@\(Int(UIScreen.main.scale))x.png"

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PodA'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'A short description of PodA.'
 
 # This description is used to generate tags and improve search results.
@@ -30,11 +30,21 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'PodA/Classes/**/*'
+  s.source_files = 'PodA/Classes/**/*.swift'
   
    s.resource_bundles = {
      'PodA' => ['PodA/Assets/*.png']
    }
+   
+   s.subspec 'Core' do |core|
+     core.source_files = 'PodA/Classes/Core/*.swift'
+   end
+   
+   s.subspec 'MapKit' do |mk|
+     mk.source_files = 'PodA/Classes/MapKit/*.swift'
+     mk.dependency 'PodA/Core'
+     mk.dependency 'YYModel'
+   end
 
 #   s.public_header_files = 'PodA/Classes/**/*.{h,swift}'
   # s.frameworks = 'UIKit', 'MapKit'
