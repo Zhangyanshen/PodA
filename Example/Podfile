@@ -1,6 +1,6 @@
 source 'https://cdn.cocoapods.org/'
 #use_frameworks!
-#use_modular_headers!
+use_modular_headers!
 
 plugin 'cocoapods-mtxx-bin'
 use_binaries!
@@ -9,6 +9,7 @@ use_binaries!
 platform :ios, '9.0'
 
 target 'PodA_Example' do
-#  pod 'PodA/MapKit', :path => '../'
-  pod 'PodA', '0.1.3', :subspecs => ['Core', 'MapKit']
+  pod 'PodA', :path => '../'
+#  pod 'PodA', '0.1.3', :subspecs => ['Core', 'MapKit']
+#  pod 'PodA'
 end

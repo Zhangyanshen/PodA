@@ -8,7 +8,7 @@
 import Foundation
 //import AFNetworking
 
-open class YSTool {
+@objc open class YSTool: NSObject {
     @objc public static func test() {
         print("我是PodA -> \(self)")
     }

@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		E5C1350605FAB9D93503E935 /* libPods-PodA_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BD5AF30B309136789F9C86 /* libPods-PodA_Example.a */; };
+		EEECA85D275F5CC700CE01D7 /* YSPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = EEECA85C275F5CC700CE01D7 /* YSPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		BE0FD76DD711DEA2DB40E619 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C35303D249CB18742C1A4C73 /* Pods-PodA_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodA_Example.release.xcconfig"; path = "Target Support Files/Pods-PodA_Example/Pods-PodA_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EEECA85A275F5CC600CE01D7 /* PodA_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PodA_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		EEECA85B275F5CC700CE01D7 /* YSPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSPerson.h; sourceTree = "<group>"; };
+		EEECA85C275F5CC700CE01D7 /* YSPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,9 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				EEECA85B275F5CC700CE01D7 /* YSPerson.h */,
+				EEECA85C275F5CC700CE01D7 /* YSPerson.m */,
+				EEECA85A275F5CC600CE01D7 /* PodA_Example-Bridging-Header.h */,
 			);
 			name = "Example for PodA";
 			path = PodA;
@@ -163,7 +170,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				27957B31BE15CF0013C69FDA /* [CP] Embed Pods Frameworks */,
-				B056D8AC85C7F3670FCB5C7E /* [CP] Copy Pods Resources */,
+				A9286E2C77EE9D1A875715DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,7 +211,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1310;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -294,14 +301,14 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PodA_Example/Pods-PodA_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B056D8AC85C7F3670FCB5C7E /* [CP] Copy Pods Resources */ = {
+		A9286E2C77EE9D1A875715DD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PodA_Example/Pods-PodA_Example-resources.sh",
-				"${PODS_ROOT}/PodA/PodA.framework/PodA.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/PodA/PodA.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -321,6 +328,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				EEECA85D275F5CC700CE01D7 /* YSPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,11 +474,14 @@
 			baseConfigurationReference = 2AF3D96A63CBAC9DFF0AAA83 /* Pods-PodA_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PodA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PodA/PodA_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -481,11 +492,13 @@
 			baseConfigurationReference = C35303D249CB18742C1A4C73 /* Pods-PodA_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PodA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PodA/PodA_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};

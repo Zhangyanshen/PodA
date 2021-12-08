@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PodA'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'A short description of PodA.'
 
 # This description is used to generate tags and improve search results.
@@ -45,6 +45,14 @@ TODO: Add long description of the pod here.
      mk.dependency 'PodA/Core'
      mk.dependency 'YYModel'
    end
+   
+  s.subspec 'Third' do |th|
+    th.source_files = 'PodA/Classes/Third/*.swift'
+    th.subspec 'Third2' do |th2|
+      th2.source_files = 'PodA/Classes/Third/Third2/*.swift'
+      th2.dependency 'SDWebImage'
+    end
+  end
 
 #   s.public_header_files = 'PodA/Classes/**/*.{h,swift}'
   # s.frameworks = 'UIKit', 'MapKit'

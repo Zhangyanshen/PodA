@@ -14,29 +14,48 @@ PODS:
   - AFNetworking/Serialization (4.0.0)
   - AFNetworking/UIKit (4.0.0):
     - AFNetworking/NSURLSession
-  - PodA/Core (0.1.3):
+  - PodA (0.1.6):
     - AFNetworking (= 4.0.0)
-  - PodA/MapKit (0.1.3):
+    - PodA/Core (= 0.1.6)
+    - PodA/MapKit (= 0.1.6)
+    - PodA/Third (= 0.1.6)
+  - PodA/Core (0.1.6):
+    - AFNetworking (= 4.0.0)
+  - PodA/MapKit (0.1.6):
     - AFNetworking (= 4.0.0)
     - PodA/Core
     - YYModel
+  - PodA/Third (0.1.6):
+    - AFNetworking (= 4.0.0)
+    - PodA/Third/Third2 (= 0.1.6)
+  - PodA/Third/Third2 (0.1.6):
+    - AFNetworking (= 4.0.0)
+    - SDWebImage
+  - SDWebImage (5.12.1):
+    - SDWebImage/Core (= 5.12.1)
+  - SDWebImage/Core (5.12.1)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - PodA/Core (= 0.1.3)
-  - PodA/MapKit (= 0.1.3)
+  - PodA (from `../`)
 
 SPEC REPOS:
   "git@github.com:Zhangyanshen/example-private-spec-bin.git":
     - AFNetworking
-    - PodA
     - YYModel
+  trunk:
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  PodA:
+    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: 9a48719229e7ccbb6f3aed2699beb26eb196c38c
-  PodA: f9ac40ad071e0063047aa312242383098da4c1c6
+  PodA: 12d74de6c0f7712e70458046e43368c6f97830bd
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   YYModel: 23eee8c4eb3f0046f4e67f42d60576c510dc932a
 
-PODFILE CHECKSUM: 036bc4183990af6b6f7b427c63be179b1fc7b18f
+PODFILE CHECKSUM: 7648bde76a6f261d017d59882c2cbae0f8cfd777
 
 COCOAPODS: 1.11.2
